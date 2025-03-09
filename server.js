@@ -11,11 +11,11 @@ dotenv.config();
 
 const PORT = process.env.PORT || 3001;
 
-const corsOptions = {
-  origin: ["https://kedia-capital.vercel.app",  "http://localhost:5173/"]
-};
+// const corsOptions = {
+//   origin: ["https://kedia-capital.vercel.app",  "http://localhost:5173/"]
+// };
 
-app.use(cors(corsOptions));
+app.use(cors('*'));
 app.use(express.json()); // allows us to accept JSON data in the req.body
 app.use(morgan("dev"));
 
