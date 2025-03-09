@@ -21,6 +21,15 @@ app.use(morgan("dev"));
 
 app.use("/api/news", newsRoutes);
 
+
+
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "UP",
+    message: "Server is healthy",
+  });
+});
+
 app.listen(PORT, () => {
   connectDB();
   console.log("Server started at http://localhost:" + PORT);
