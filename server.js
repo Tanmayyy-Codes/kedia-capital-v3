@@ -12,7 +12,7 @@ dotenv.config();
 const PORT = process.env.PORT || 3001;
 
 const corsOptions = {
-  origin: "http://localhost:5174",
+  origin: "https://kedia-capital.vercel.app/",
 };
 
 app.use(cors(corsOptions));
